@@ -11,7 +11,7 @@
     background-color: $denary-color;
     // border: 2px solid $quinary-color;
     border-radius: 1rem;
-    padding: 0;
+    padding: 0 0 2rem 0;
     transition: all 0.5s ease-in-out;
 }
 
@@ -120,10 +120,10 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     width: 100%;
     margin-top: 2rem;
-    padding: 0 1.5rem;
+    padding: 0 1.5rem 1.5rem 1rem;
 }
 
 @keyframes image-rotate {
@@ -290,7 +290,7 @@
     .hero-main {
         width: 100%;
         border-radius: 1rem;
-        padding: 1rem;
+        padding: 3rem;
     }
 
     .hero-title-container {
@@ -302,6 +302,9 @@
         }
     }
 
+    .hero-btn-container {
+        margin: 2rem 0 0 0;
+    }
 
 }
 
