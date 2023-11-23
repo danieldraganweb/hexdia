@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${gruppo.variable} ${roboto.variable}`}>
+    <>
       <Head>
         <title>HEXDIA</title>
         <meta name="description" content="HEXDIA" />
@@ -41,10 +41,12 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <body>
-        <Navbar />
-        {children}
-      </body>
-    </html>
+      <html lang="en" className={`${gruppo.variable} ${roboto.variable}`}>
+        <body>
+          <Navbar />
+          {children}
+        </body>
+      </html>
+    </>
   );
 }
