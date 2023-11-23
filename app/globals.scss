@@ -15,14 +15,13 @@
   background-color: $primary-color;
   color: $secondary-text-color;
   margin: 0 auto;
-  max-width: 100dvw;
+  width: 100%;
   scroll-behavior: smooth;
 }
 
-html,
-body {
+html {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1980px;
   overflow-x: hidden;
   scroll-behavior: smooth;
   margin: 0 auto;
@@ -53,4 +52,8 @@ body {
 
 body {
   margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }

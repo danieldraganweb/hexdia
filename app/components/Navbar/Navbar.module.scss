@@ -6,10 +6,9 @@
 //Navbar mobile 
 
 .navbar-container {
+    width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    background-color: aquamarine;
-
 }
 
 .navbar {
@@ -19,7 +18,7 @@
     top: 0;
     width: 100%;
     margin: 0 auto;
-    background-color: $septenary-color;
+    background-color: $tertiary-accent-color;
     z-index: 1000;
     padding: 1rem 0;
 
@@ -29,22 +28,24 @@
     box-sizing: border-box;
 
     button {
-        background-color: lighten($color: $tertiary-color, $amount: 10%);
+        background-color: $quaternary-accent-color;
         color: $secondary-color;
         padding: 0.7rem 0.9rem;
         border-radius: 12rem;
         font-size: $font-size-mobile;
         font-family: $secondary-font;
         transition: all 0.3s ease-in-out;
+        border: 2px solid $secondary-color;
     }
 
     button:hover {
         transform: translateY(-0.2em);
-        background-color: $primary-color;
-        color: $primary-accent-color;
+        background-color: $nonary-color;
+        color: $primary-text-color;
         cursor: pointer;
         transition-duration: 0.3s backwards;
-        box-shadow: 0 1em 1.5em rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0.4em 0.5em rgba(228, 225, 225, 0.1);
+
     }
 
     button:active {
@@ -104,7 +105,7 @@
     }
 
     .logo {
-        width: 140px;
+        width: 50%;
         height: auto;
         margin: 0 auto;
         display: flex;
@@ -113,13 +114,18 @@
         font-family: $secondary-font;
         margin-top: 0;
 
-        img {
-            width: 100%;
-            height: auto;
-            margin: 0 auto;
-            border-radius: 1rem;
-            font-family: $secondary-font;
-            margin-top: 0.28em;
+        a {
+            cursor: pointer;
+        }
+
+        li {
+            font-size: clamp($font-size-desktop-wide, 1vw, $font-size-desktop-ultra-wide);
+            animation: fade-in-top 3.5s forwards;
+            text-align: center;
+            color: $secondary-color;
+            font-family: $primary-font;
+            letter-spacing: 0.4rem;
+            cursor: pointer;
         }
     }
 
@@ -128,20 +134,24 @@
         height: 1.5em;
         fill: $primary-color;
         transition: all 0.3s ease-in-out;
+        padding: 0;
+        margin-top: 3px;
     }
 
     .hamburger-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         cursor: pointer;
         width: 3.5em;
         height: 3.5em;
-        background-color: $secondary-color;
+        background-color: $quaternary-accent-color;
         border-radius: 50%;
         align-items: center;
-        margin-right: 17px;
+        margin-right: 10px;
+        box-shadow: 0 0.4em 0.5em rgba(228, 225, 225, 0.1);
+
     }
 
     .burgerMenuButton {
@@ -175,15 +185,15 @@
         font-size: $font-size-small;
         margin-left: 1em;
         letter-spacing: 0.05em;
-        color: $primary-color;
+        color: $secondary-color;
         box-sizing: border-box;
-        // animation: fade-in-top 1s ease-in-out;
+        animation: fade-in-top 1s ease-in-out;
 
         li {
             font-size: clamp($font-size-tablet, 1vw, $font-size-desktop-wide);
             padding-bottom: 0.5em;
-            animation: fade-in-top 2.5s forwards;
-            border-bottom: 1px solid $primary-color;
+            animation: fade-in-top 3.5s forwards;
+            border-bottom: 1px solid $secondary-color;
 
 
         }
@@ -204,7 +214,7 @@
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            background-color: rgba($secondary-color, 1);
+            background-color: $denary-color;
             position: fixed;
             margin: 0 auto;
             width: 100%;
@@ -243,7 +253,7 @@
     .lineTop,
     .lineMiddle,
     .lineBottom {
-        fill: $primary-color;
+        fill: $secondary-color;
         transition: transform 0.3s ease-in-out, opacity 0s ease-in-out;
     }
 
@@ -273,55 +283,31 @@
 }
 
 
-// @include respond(2xl) {
-//     .navbar {
-//         padding: 0;
-//         box-sizing: border-box;
-//         width: 100%;
-//         margin: 0 auto;
-//         max-width: 1440px;
-//         height: 100px;
-//         background-color: $secondary-color;
-//     }
-
-//     .logo {
-//         width: 200px;
-//         height: auto;
-//         // margin-left: 12em;
-//     }
-
-//     .navbar-mobile {
-//         display: none;
-//     }
-
-//     .hamburger-container {
-//         display: none;
-//     }
-
-//     .navbar-desktop {
-//         padding: 0px;
-//         display: flex;
-//         flex-direction: row;
-//         justify-content: space-between;
-//     }
-// }
-
-
-// //Tablet
+//Tablet
 
 @include respond(md) {
-    .navbar {
+    .navbar-container {
+        width: 100%;
+        max-width: 1980px;
         margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar {
+        // margin: 0 auto;
         box-sizing: border-box;
         position: fixed;
         top: 0;
         width: 100%;
         margin: 0 auto;
-        background-color: $secondary-color;
+        background-color: $tertiary-accent-color;
         z-index: 1000;
-        max-width: 1500px;
+        max-width: 1980px;
         padding: 0rem;
-        height: 80px;
+        height: 90px;
     }
 
     .navbar-button-container {
@@ -346,7 +332,7 @@
 
     .navbar-desktop {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -361,15 +347,24 @@
         width: 100%;
         max-width: 1440px;
         box-sizing: border-box;
+        color: $secondary-text-color;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 1.5rem;
 
         .logo {
-            width: 180px;
+            width: 280px;
             height: auto;
             font-size: $font-size-desktop-wide;
+            font-family: $secondary-font;
+            font-weight: 100;
 
             a {
-                font-size: $font-size-desktop-ultra-wide;
-
+                font-size: $font-size-desktop-ultra-ultra-wide;
+                color: $secondary-color;
+                font-family: $secondary-font;
+                cursor: pointer;
             }
         }
     }
@@ -379,22 +374,27 @@
         max-width: 100dvw;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
         letter-spacing: 0.05em;
         color: $primary-color;
         padding: 0;
         padding: 0 1rem;
         box-sizing: border-box;
+        gap: 5rem;
+        transition: all 0.3s ease-in-out;
 
         a {
             font-size: $font-size-mobile-wide;
+            color: $primary-text-color;
+            transition: all 0.3s ease-in-out;
+            font-family: $secondary-font;
         }
 
     }
 
     .navLinks a:hover {
-        color: $primary-accent-color;
+        color: $octonary-color;
         cursor: pointer;
         transform: translateY(-0.2em);
         transition: all 0.4s ease-in-out;
@@ -414,122 +414,4 @@
         transform: translateY(0.2em);
     }
 
-
-
 }
-
-// //Desktop
-
-// @include respond(xl) {
-//     .navbar {
-//         padding: 0;
-//         display: flex;
-//         flex-direction: row;
-//         justify-content: center;
-//         align-items: center;
-//     }
-
-//     .navbar-mobile {
-//         display: none;
-//     }
-
-//     .hamburger-container {
-//         display: none;
-//     }
-
-//     .navbar-desktop {
-//         padding: 0 1rem;
-//     }
-
-//     .logo {
-//         width: 200px;
-//         height: auto;
-
-
-//         img {
-//             width: 200px;
-//             height: auto;
-//         }
-//     }
-
-//     .navbar-button-container {
-//         box-sizing: border-box;
-
-//         button {
-//             padding: 0.8rem 1.5rem;
-//             font-size: $font-size-tablet;
-
-//         }
-//     }
-
-//     .navbar-links {
-//         cursor: pointer;
-//     }
-
-//     .navLinks {
-//         width: 100%;
-//         display: flex;
-//         flex-direction: row;
-//         justify-content: space-evenly;
-//         align-items: center;
-//         list-style: none;
-//         letter-spacing: 0.05em;
-//         color: $primary-color;
-//         box-sizing: border-box;
-//         margin: 0 auto;
-//         gap: 1rem;
-//         height: 100px;
-//         padding: 0 1rem;
-
-//         a {
-//             font-size: $font-size-tablet;
-//         }
-//     }
-
-//     .navLinks a:hover {
-//         color: $primary-accent-color;
-//         cursor: pointer;
-//         // transform: translateY(-0.2em);
-
-//     }
-
-//     .navLinks li:hover {
-//         color: $primary-accent-color;
-//         cursor: pointer;
-//         transform: translateY(-0.2em);
-//         transition: all 0.4s ease-in-out;
-//     }
-
-//     .navLinks a:active {
-//         transition: all 0.4s ease-in;
-//         transform: translateY(0.2em);
-//     }
-// }
-
-
-// @include respond(2xl) {
-//     .navbar {
-//         padding: 0;
-//         box-sizing: border-box;
-//         width: 100%;
-//         margin: 0 auto;
-//     }
-
-//     .logo {
-//         width: 200px;
-//         height: auto;
-//         // margin-left: 12em;
-//     }
-
-//     .navbar-mobile {
-//         display: none;
-//     }
-
-//     .hamburger-container {
-//         display: none;
-//     }
-
-//     .navbar-desktop {
-//         padding: 0px;
-//     }
-// }
