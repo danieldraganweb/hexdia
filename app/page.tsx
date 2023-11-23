@@ -10,6 +10,7 @@ export default function Home() {
     <>
       <main className={styles.main}>
         <Hero />
+        <Hero />
       </main>
     </>
   );
