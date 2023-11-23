@@ -1,8 +1,9 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
-// import Logo from "./Logo";
 import styles from "./Navbar.module.scss";
 import Link from "next/link";
+// import Logo from "./Logo";
 // import disableScroll from "disable-scroll";
 
 function Navbar() {
@@ -67,10 +68,20 @@ function Navbar() {
               </button>
             </div>
             {/* <Logo /> */}
+            <ul className={styles.logo}>
+              <li>
+                <Link href="/" key="home" onClick={() => setMenuOpen(false)}>
+                  HEXDIA
+                </Link>
+              </li>
+            </ul>
             <div className={styles["navbar-button-container"]}>
-              <Link href="/book">
-                <button className={styles["navbar-button"]} aria-label="Buchen">
-                  Sign In
+              <Link href="/contact">
+                <button
+                  className={styles["navbar-button"]}
+                  aria-label="Contact"
+                >
+                  Contact
                 </button>
               </Link>
             </div>
@@ -100,6 +111,15 @@ function Navbar() {
                 </li>
                 <li>
                   <Link
+                    href="/blog"
+                    key="blog"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/about-us"
                     key="about-us"
                     onClick={() => setMenuOpen(false)}
@@ -113,18 +133,14 @@ function Navbar() {
           {/* Second section for desktop view */}
           <div className={styles["navbar-desktop"]}>
             <div className={styles["navbar-links"]}>
+              <ul className={styles.logo}>
+                <li>
+                  <Link href="/" key="home" onClick={() => setMenuOpen(false)}>
+                    HEXDIA
+                  </Link>
+                </li>
+              </ul>
               <ul className={styles.navLinks}>
-                <ul className={styles.logo}>
-                  <li>
-                    <Link
-                      href="/"
-                      key="home"
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      HEXDIA
-                    </Link>
-                  </li>
-                </ul>
                 <li>
                   <Link
                     href="/catalog"
@@ -136,11 +152,11 @@ function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/contact"
+                    href="/blog"
                     key="blog"
                     onClick={() => setMenuOpen(false)}
                   >
-                    Contact
+                    Blog
                   </Link>
                 </li>
                 <li>
@@ -154,22 +170,13 @@ function Navbar() {
                 </li>
 
                 <li>
-                  {/* <div className={styles["navbar-logo"]}> */}
-                  {/* <Logo /> */}
-                  {/* </div> */}
-                </li>
-
-                <li>
-                  <div className={styles["navbar-button-container"]}>
-                    <Link href="/book">
-                      <button
-                        className={styles["navbar-button"]}
-                        aria-label="Buchen"
-                      >
-                        Sign In
-                      </button>
-                    </Link>
-                  </div>
+                  <Link
+                    href="/contact"
+                    key="blog"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Contact
+                  </Link>
                 </li>
               </ul>
             </div>

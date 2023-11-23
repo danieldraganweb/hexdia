@@ -1,15 +1,34 @@
-$primary-text-color: #000000;
-$secondary-text-color: #ffffff;
+// Text colors
+$primary-text-color: lighten(#ffffff, 10%);
+$secondary-text-color: darken(#000000, 10%);
 
+//Primary color
 $primary-color: lighten(#000000, 10%);
-$secondary-color: #FFFFFF;
+$secondary-color: darken(#ffffff, 10%);
+
+//Grey colors
 $tertiary-color: #707070;
 $quaternary-color: #D8D8D8;
-$quinary-color: #FFE3E1;
-$senary-color: #9DC08B;
-$septenary-color: #E74646;
-$octonary-color: #1D267D;
-$nonary-color: #1D1CE5;
 
+// Color palette
+$quinary-color: #393E46;
+$senary-color: #222831;
+$septenary-color: #FFFBE0;
+$octonary-color: #FCDA05;
+$nonary-color: #015668;
+$denary-color: #222831;
+
+// Accent colors
 $primary-accent-color: #d5b381;
-$secondary-accent-color: rgba(202, 178, 86, 1);
+$secondary-accent-color: #055E68;
+$tertiary-accent-color: #015668;
+$quaternary-accent-color: #193C50;
+$quinary-accent-color: #232D3F;
+
+
+// Utility colors
+
+$success-color: #28a745;
+$warning-color: #ffc107;
+$danger-color: #dc3545;
+$info-color: #17a2b8;

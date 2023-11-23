@@ -8,13 +8,27 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 6rem;
+    padding: 6rem 0;
     min-height: 100vh;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100dvh;
 
     h1 {
-        font-size: 3rem;
+        font-size: clamp($font-size-desktop-wide, 5vw, $font-size-desktop-wide);
         font-weight: 700;
-        margin-bottom: 2rem;
-        color: $septenary-color;
+        text-align: center;
+        letter-spacing: 0.03rem;
+        font-weight: 400;
+        margin-top: 1.5rem;
+        background: linear-gradient(45deg, $octonary-color, $septenary-color, $secondary-color);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: left;
+        padding: 0 3rem;
+        font-family: $secondary-font;
+        animation: fade-in-left 3s ease-in-out;
     }
 }
