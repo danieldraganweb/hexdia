@@ -4,6 +4,8 @@ import "./globals.scss";
 import Navbar from "./components/Navbar/Navbar";
 import Head from "next/head";
 import { Gruppo, Roboto } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 
 const gruppo = Gruppo({
   subsets: ["latin"],
