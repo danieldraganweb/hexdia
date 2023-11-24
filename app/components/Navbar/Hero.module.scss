@@ -7,17 +7,18 @@
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    margin-top: 1.5rem;
+    margin: 2rem 0;
     background-color: $denary-color;
     // border: 2px solid $quinary-color;
     border-radius: 1rem;
     padding: 0 0 2rem 0;
     transition: all 0.5s ease-in-out;
+    box-sizing: border-box;
 }
 
 .hero-main:focus,
 .hero-main:hover {
-    box-shadow: $octonary-color 0px 0px 10px 0px;
+    box-shadow: $tertiary-color-palette 0px 0px 10px 0px;
     transition: all 0.5s ease-in-out;
     border: none;
 }
@@ -29,21 +30,24 @@
     width: 100%;
     height: auto;
     animation: fade-in-center 3s ease-in-out;
+    animation: image-brighness 5s ease-in-out;
     transition: all 0.5s ease-in-out;
 
 
     img {
         width: 100%;
         height: auto;
-        padding: 0 0 1rem 0;
-        filter: brightness(0.6);
-        transition: all 0.5s ease-in-out;
+        padding: 0 1rem 2rem 1rem;
     }
 
-    img:focus,
-    img:hover {
-        filter: brightness(1.1);
-        transition: all 0.5s ease-in-out;
+    @keyframes image-brighness {
+        0% {
+            filter: brightness(0.5);
+        }
+
+        100% {
+            filter: brightness(1);
+        }
     }
 }
 
@@ -123,7 +127,7 @@
     gap: 1.5rem;
     width: 100%;
     margin-top: 2rem;
-    padding: 0 1.5rem 1.5rem 1rem;
+    padding: 0 1rem 0 1rem;
 }
 
 @keyframes image-rotate {
@@ -195,7 +199,7 @@
         width: 100%;
         border-radius: 1rem;
         padding: 0;
-        margin-top: 2rem;
+        margin-top: 2.3rem;
     }
 
     .hero-text-wrapper {
@@ -217,6 +221,23 @@
         }
     }
 
+    .logo {
+
+        img {
+            width: 100%;
+            height: auto;
+            filter: brightness(0.6);
+            transition: all 0.5s ease-in-out;
+
+        }
+
+        img:focus,
+        img:hover {
+            filter: brightness(1.1);
+            transition: all 0.5s ease-in-out;
+        }
+    }
+
     .hero-text-container {
         width: 50%;
         display: flex;
@@ -234,6 +255,7 @@
 
     .hero-btn-container {
         padding: 0;
+        margin-top: 3rem;
     }
 }
 
@@ -283,6 +305,7 @@
 
     .hero-btn-container {
         padding: 0;
+        margin-top: 3rem;
     }
 }
 
@@ -291,6 +314,7 @@
         width: 100%;
         border-radius: 1rem;
         padding: 3rem;
+        margin-top: 3rem;
     }
 
     .hero-title-container {
@@ -303,7 +327,7 @@
     }
 
     .hero-btn-container {
-        margin: 2rem 0 0 0;
+        margin: 5rem 0 0 0;
     }
 
 }
@@ -313,7 +337,7 @@
         width: 100%;
         border-radius: 1rem;
         padding: 1rem;
-        margin-top: 2rem;
+        margin-top: 3rem;
     }
 
     .hero-title-container {

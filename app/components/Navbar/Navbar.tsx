@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Navbar.module.scss";
 import Link from "next/link";
-// import Logo from "./Logo";
+import Logo from "./Logo";
 // import disableScroll from "disable-scroll";
 
 function Navbar() {
@@ -71,7 +71,7 @@ function Navbar() {
             <ul className={styles.logo}>
               <li>
                 <Link href="/" key="home" onClick={() => setMenuOpen(false)}>
-                  HEXDIA
+                  <Logo />
                 </Link>
               </li>
             </ul>
@@ -136,7 +136,7 @@ function Navbar() {
               <ul className={styles.logo}>
                 <li>
                   <Link href="/" key="home" onClick={() => setMenuOpen(false)}>
-                    HEXDIA
+                    <Logo />
                   </Link>
                 </li>
               </ul>

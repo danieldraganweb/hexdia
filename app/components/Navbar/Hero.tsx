@@ -11,10 +11,12 @@ const Hero = () => {
         <div className={styles["hero-image"]}>
           {" "}
           <Image
-            src="/hexdia.png"
+            src="/logo-transparent.svg"
             alt="hexdia logo"
             width={1440}
             height={350}
+            blurDataURL="/hexdia.svg"
+            placeholder="blur"
             // layout="responsive"
           />
         </div>

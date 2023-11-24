@@ -1,0 +1,72 @@
+@use './app/styles/base/_typography' as *;
+@use './app/styles/base/_variables' as *;
+@use './app/styles/utils/_mixins' as *;
+@use './app/styles/utils/_functions' as *;
+
+.gallery-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    padding: 2rem 0 2rem 0;
+    position: relative;
+    background-color: $denary-color;
+    border: 2px solid $quinary-color;
+    border-radius: 1rem;
+}
+
+.gallery-title-container {
+    h1 {
+        font-size: clamp($font-size-desktop-ultra-wide, 10vw, $font-size-desktop-ultra-ultra-wide);
+        font-weight: 400;
+        color: $primary-text-color;
+        text-align: center;
+        margin-bottom: 2rem;
+        font-family: $tertiary-font;
+    }
+}
+
+.gallery-image-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 1em;
+    border-radius: 0.5rem;
+    gap: 2em;
+    overflow-x: auto;
+    margin-bottom: 0.5rem;
+}
+
+
+
+.gallery-image-wrapper {
+    width: 400px;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    gap: 3rem;
+    overflow-y: scroll;
+    overscroll-behavior-inline: contain;
+    scroll-snap-align: center;
+    scroll-snap-type: inline mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    img {
+        width: 100%;
+        max-width: 1440px;
+        height: auto;
+        scroll-snap-align: start;
+        overscroll-behavior-inline: contain;
+    }
+}

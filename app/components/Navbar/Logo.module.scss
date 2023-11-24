@@ -1,0 +1,20 @@
+@use './app/styles/base/_typography' as *;
+@use './app/styles/base/_variables' as *;
+@use './app/styles/utils/_mixins' as *;
+@use './app/styles/utils/_functions' as *;
+
+
+.logo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
