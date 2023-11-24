@@ -11,7 +11,7 @@ const Hero = () => {
         <div className={styles["hero-image"]}>
           {" "}
           <Image
-            src="/logo-transparent.svg"
+            src="/Logo-transparent.svg"
             alt="hexdia logo"
             width={1440}
             height={350}
