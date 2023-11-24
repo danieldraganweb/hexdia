@@ -3,16 +3,20 @@ import styles from "./loading.module.scss";
 
 const Loading: React.FC = () => {
   return (
-    <main className={styles["loading"]}>
-      <div className={styles["wrapper"]}>
-        <div className={styles["circle"]}></div>
-        <div className={styles["circle"]}></div>
-        <div className={styles["circle"]}></div>
-        <div className={styles["shadow"]}></div>
-        <div className={styles["shadow"]}></div>
-        <div className={styles["shadow"]}></div>
-      </div>
-    </main>
+    <div className={styles.loader}>
+      <div className={styles["cell d-0"]}></div>
+      <div className={styles["cell d-1"]}></div>
+      <div className={styles["cell d-2"]}></div>
+
+      <div className={styles["cell d-1"]}></div>
+      <div className={styles["cell d-2"]}></div>
+
+      <div className={styles["cell d-2"]}></div>
+      <div className={styles["cell d-3"]}></div>
+
+      <div className={styles["cell d-3"]}></div>
+      <div className={styles["cell d-4"]}></div>
+    </div>
   );
 };
 
