@@ -37,7 +37,7 @@ export default function RootLayout({
       <Head>
         <title>HEXDIA</title>
         <meta name="description" content="HEXDIA" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/Logo.ico" />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>

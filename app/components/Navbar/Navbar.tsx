@@ -35,6 +35,13 @@ function Navbar() {
                 </Link>
               </li>
             </ul>
+            {/* <ul className={styles.logo}>
+              <li>
+                <Link href="/" key="home" onClick={() => setMenuOpen(false)}>
+                  <Logo />
+                </Link>
+              </li>
+            </ul> */}
             {/* <div className={styles["navbar-button-container"]}>
               <Link href="/contact">
                 <button
