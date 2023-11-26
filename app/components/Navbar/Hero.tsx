@@ -1,9 +1,11 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import styles from "./Hero.module.scss";
 import Link from "next/link";
+import Button from "../Buttons/Button";
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <div className={styles["hero-main"]}>
       <div className={styles.container}>
@@ -36,10 +38,18 @@ const Hero = () => {
             </p>
             <section className={styles["hero-btn-container"]}>
               <Link href="/blog">
-                <button className={styles["hero-btn"]}>Learn More</button>
+                <Button
+                  text="Learn More"
+                  onClick={() => {}}
+                  ariaLabel="Learn More"
+                />
               </Link>
               <Link href="/contact">
-                <button className={styles["hero-btn"]}>Contact Us</button>
+                <Button
+                  text="Contact Us"
+                  onClick={() => {}}
+                  ariaLabel="Contact Us"
+                />
               </Link>
             </section>
           </section>
