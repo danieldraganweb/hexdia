@@ -4,13 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const images = [
-  "/diamond-drill-sample-detail.jpg",
   "/diamond-drill-sample-1.jpg",
   "/diamond-drill-sample-2.jpg",
   "/diamond-drill-sample-3.jpg",
   "/diamond-drill-sample-4.jpg",
+  "/diamond-drill-sample-detail.jpg",
 ];
-const Gallery = () => {
+const Gallery: React.FC = () => {
   return (
     <>
       <div className={styles["gallery-title-container"]}>
@@ -18,7 +18,8 @@ const Gallery = () => {
           Discover our Product Catalog
         </h1> */}
         <h1 className={styles["gallery-subtitle"]}>
-          We offer a wide range of products for your needs!
+          ~ HEXDIA ~ Unmatched Precision, Unrivaled Performance. ~ Diamond Edge,
+          Enduring Excellence.
         </h1>
       </div>
       <div className={styles["gallery-main"]}>

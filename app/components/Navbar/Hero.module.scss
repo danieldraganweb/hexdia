@@ -30,7 +30,7 @@
     width: 100%;
     height: auto;
     animation: fade-in-center 3s ease-in-out;
-    animation: image-brighness 5s ease-in-out;
+    animation: image-brighness 3s ease-in-out;
     transition: all 0.5s ease-in-out;
 
 
@@ -42,7 +42,7 @@
 
     @keyframes image-brighness {
         0% {
-            filter: brightness(0.5);
+            filter: brightness(0.3);
         }
 
         100% {
@@ -131,29 +131,6 @@
     animation: fade-in-right 3s ease-in-out;
 }
 
-@keyframes image-rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes image-flip {
-    0% {
-        transform: scaleY(1);
-    }
-
-    50% {
-        transform: scaleY(-1);
-    }
-
-    100% {
-        transform: scaleY(1);
-    }
-}
 
 @keyframes fade-in-center {
     from {
