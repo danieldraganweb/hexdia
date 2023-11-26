@@ -15,8 +15,8 @@ const Hero: React.FC = () => {
           <Image
             src="/Logo-transparent.svg"
             alt="hexdia logo"
-            width={1440}
-            height={350}
+            width={940}
+            height={330}
             blurDataURL="/hexdia.svg"
             placeholder="blur"
             // layout="responsive"
