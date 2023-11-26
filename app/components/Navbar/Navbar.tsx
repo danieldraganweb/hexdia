@@ -27,6 +27,24 @@ function Navbar() {
       <div className={styles["navbar-container"]}>
         <nav className={styles["navbar"]}>
           <div className={styles["navbar-mobile"]}>
+            {/* <Logo /> */}
+            <ul className={styles.logo}>
+              <li>
+                <Link href="/" key="home" onClick={() => setMenuOpen(false)}>
+                  <Logo />
+                </Link>
+              </li>
+            </ul>
+            {/* <div className={styles["navbar-button-container"]}>
+              <Link href="/contact">
+                <button
+                  className={styles["navbar-button"]}
+                  aria-label="Contact"
+                >
+                  Contact
+                </button>
+              </Link>
+            </div> */}
             <div className={styles["hamburger-container"]}>
               <button
                 className={styles.burgerMenuButton}
@@ -66,24 +84,6 @@ function Navbar() {
                   />
                 </svg>
               </button>
-            </div>
-            {/* <Logo /> */}
-            <ul className={styles.logo}>
-              <li>
-                <Link href="/" key="home" onClick={() => setMenuOpen(false)}>
-                  <Logo />
-                </Link>
-              </li>
-            </ul>
-            <div className={styles["navbar-button-container"]}>
-              <Link href="/contact">
-                <button
-                  className={styles["navbar-button"]}
-                  aria-label="Contact"
-                >
-                  Contact
-                </button>
-              </Link>
             </div>
             {menuOpen && (
               <ul
